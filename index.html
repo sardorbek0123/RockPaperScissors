@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Rock, Paper, Scissors</title>
+  </head>
+  <body>
+    <section class="indicators">
+      <div class="container">
+        <div class="indicators__text">Rock Paper Scissors</div>
+
+        <div class="indicators__score">
+          <span class="indicators__score__item1">Score</span>
+          <input
+            type="text"
+            value="0"
+            class="indicators__score__item2"
+            id="score"
+            disabled
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="elements" id="elements">
+      <div class="container" id="el__img">
+
+        <div class="picked" id="picked">
+          <h3 class="picked__item">You Picked</h3>
+          <h3 class="picked__item h">The house picked</h3>
+        </div>
+
+        <img src="images/Paper.svg" alt="paper" id="paper" onclick="playerOption(id)" class="img"/>
+        <img src="images/Scissors.svg" alt="scissors" id="scissors" onclick="playerOption(id)" class="img"/>
+        <img src="images/Rock.svg" alt="rock" id="rock" onclick="playerOption(id)" class="img"/>
+        
+      </div>
+      <div class="result" id="result"></div>
+      <button class="restart" onclick="restart()" id="restart__btn">Play again</button>
+      
+
+      <section class="rules" id="rules">
+        <div class="rules__container">
+          <div class="rules__text">rules
+            <img src="images/X.svg" alt="x" class="rules__img2" onclick="displayRules()"/>
+          </div>
+          <img src="images/rules.svg" alt="rules" class="rules__img1"/>
+        </div>
+      </section>
+      
+    </section>
+
+    
+
+    <div class="display__rules">
+      <button class="rules__btn" id="rules__btn" onclick="displayRules()">Rules</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
